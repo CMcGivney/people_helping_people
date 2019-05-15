@@ -1,0 +1,13 @@
+<h1>People Helping People</h1>
+<hr />
+
+<%= link_to "Create New Person", persons_path, method: :create %>
+
+<% @persons.each do |person| %>
+<h2> <%= person.first_name %> <%= person.last_name %>  </h2>
+<%= link_to "Show Person", person_path(person.id) %>
+<%= link_to "Edit Person", edit_person_path(person.id) %>
+<%= link_to "Delete Person", person_path(person.id), method: :delete %> 
+
+
+<% end %>
